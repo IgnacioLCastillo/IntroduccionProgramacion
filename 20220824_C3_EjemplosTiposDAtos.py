@@ -1,5 +1,3 @@
-
-
 unfloata=float ('2.5')
 unfloatb= (5)
 texto = str(25)
