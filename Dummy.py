@@ -1,48 +1,60 @@
-#Definicion y dimensionamiento
-import array as arr
+# -*- coding: utf-8 -*-
+import array
+def mimain():
+    valores_arreglo = array.array('i', [1,3,4,5,6,7,-1,-5])
+    while True:
+        print("\nMenú de Opciones:")
+        print("1 - Corregir el vector")
+        print("2 - Promedio vector entre limites")
+        print("3 - Salir")
+        opcion = input("Elija una opción: ")
+        if opcion == "1":
+            print(f"Opcion Corregir el vector{valores_arreglo}")
+            for i in range(len(valores_arreglo)):
+                if valores_arreglo[i] < 0:
+                    valores_arreglo[i] = abs(valores_arreglo[i])
+            print(f"Vector corregido: {valores_arreglo}")
+        elif opcion == "2":
+            print("Opcion Promedio entre limites")
 
-def udfCargaVector(mipArreglo, vipCantElem):
-    for i in range(0,vipCantElem,1):
-        mipArreglo[i]=int(input("Ingrese un valor"))
+            if any(valor < 0 for valor in valores_arreglo):
+                print("El vector debe estar corregido antes de calcular el promedio ")
+            else:
+                try:
+                    x = int(input("Ingrese la posición X (índice): "))
+                    y = int(input("Ingrese la posición Y (índice): "))
 
-def udfMiMaximo(mipArreglo, vipCantElem):
-    lmax=mipArreglo[0]  #Asigno al primero como Maximo (y minimo si fuese el caso)
-    for i in range(1, vipCantElem, 1):
-            if mipArreglo[i]>lmax:
-                lmax = mipArreglo[i]
-    return lmax
+                    if x < 0 or y >= len(valores_arreglo) or y <= x:
+                        print("¡Error! Posiciones inválidas.")
+                    else:
+                        promedio = sum(valores_arreglo[x:y + 1]) / (y - x + 1)
+                        print(f"Promedio entre posiciones {x} y {y}: {promedio}")
+                except ValueError:
+                    print("¡Error! Ingrese números enteros para las posiciones.")
+                if opcion == "2":
+                    if any(valor < 0 for valor in valores_arreglo):
+                        print("¡Error! El vector debe estar corregido antes de calcular el promedio entre límites.")
+                    else:
+                        try:
+                            x = int(input("Ingrese la posición X (índice): "))
+                            y = int(input("Ingrese la posición Y (índice): "))
 
-def udfMuestraMatriz(mipArreglo, vipCantElem):
-    #Muestro lo cargado
-    for i in range(0, vipCantElem, 1):
-        print(mipArreglo[i])
+                            if x < 0 or y >= len(valores_arreglo) or y <= x:
+                                print("¡Error! Posiciones inválidas.")
+                            else:
+                                total = 0
+                                elementos = 0
+                                for i in range(x, y + 1):
+                                    total += valores_arreglo[i]
+                                    elementos += 1
+                                promedio = total / elementos
+                                print(f"Promedio entre posiciones {x} y {y}: {promedio}")
+                        except ValueError:
+                            print("¡Error! Ingrese números enteros para las posiciones.")
 
-
-#----------------Main () del C-------------
-miArreglo = arr.array('i',range(5))
-miOtroArreglo= arr.array('i',range(8))
-viCantElem=len(miArreglo)
-viCantElemdelOtroArreglo=len(miOtroArreglo)
-#Cargo El Vector
-udfCargaVector(miArreglo,viCantElem)
-maxResultado=udfMiMaximo(miArreglo,viCantElem)
-udfMuestraMatriz(miArreglo,viCantElem)
-print(f'El maximo es:{maxResultado}')
-
-udfCargaVector(miOtroArreglo,viCantElemdelOtroArreglo)
-maxResultado=udfMiMaximo(miOtroArreglo,viCantElemdelOtroArreglo)
-udfMuestraMatriz(miOtroArreglo,viCantElemdelOtroArreglo)
-print(f'El maximo es:{maxResultado}')
-#udfCargaVector(miOtroArreglo,viCantElemdelOtroArreglo)
-
-
-
-#Reviso el Maximo y lo muestro
-'''for i in range(0, 5, 1):
-    if i==0:
-        max=miArreglo[i]
-    else:
-        if miArreglo[i]>max:
-            max = miArreglo[i]
-print(f"El maximo del vecto es {max} ")
-'''
+        elif opcion == "3":
+            print("Saliendo del programa.")
+            break
+        else:
+            print("Opción no válida. Por favor, elija una opción válida.")
+mimain()

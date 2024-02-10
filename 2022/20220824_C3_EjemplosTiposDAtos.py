@@ -16,3 +16,10 @@ print (sumar)
 binario = "1101"
 valor = int(binario, 2)
 print("Que valor es en entero?:", valor)
+
+x=(0==False)
+x=(1==True)
+x=(2==True)
+print(x)
+
+x=
