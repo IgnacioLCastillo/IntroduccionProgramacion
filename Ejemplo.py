@@ -1,6 +1,14 @@
-c=0
-numero=10
-while (c <= numero):
-    if c % 2 != 0:
-        print(c, end=", ")
-    c=c+1
+import numpy as np
+#import random
+#miMatrix = np.zeros(shape=(2,3),dtype=int)
+# miMatrix = np.ones(shape=(2,3),dtype=int)
+#miMatrix = np.full((2,3), random.randint(1,10))
+#miMatrix = np.random.random((2,3))
+#miMatrix = np.random.randint(1,10,(2,3))
+#miMatrix = np.random.randint(1,10,(2,3))
+#miMatrix = np.array([[1,2,3],[4,5,6],[7,8,9]])
+#miMatrix = np.matrix('1 2 3; 4 5 6; 7 8 9')
+#miMatrix = np.matrix([[1,2,3],[4,5,6],[7,8,9]])
+#miMatrix = np.array([range(3),range(3)])
+miMatrix = np.matrix([range(3),range(3)])
+print ('Forma 1',miMatrix)
