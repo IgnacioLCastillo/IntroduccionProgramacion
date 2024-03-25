@@ -28,12 +28,3 @@ else:
             print("No vota no es Argentino")
     else:
         print("No vota no cumple requisito Edad")
-for
-1 22
-2 33
-3 44
-4 33
-5 44
-
-1 22
-2 33

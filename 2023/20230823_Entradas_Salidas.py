@@ -26,3 +26,4 @@ print("El Resultado es: {} y peso {} ".format(resulEdad, miPeso))
 #Otra mediante %
 print("El Resultado es: %3d, y peso : %2.2f" % (resulEdad, miPeso))
 print(1,2,3,4,sep='|',end='*')
+
