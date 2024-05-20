@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+#Armo el codigo para hacer mi propia funcion Len
 
 #Podriamos calcular "a mano" con un contador el tamaño de la palabra
 #tamaño=0
