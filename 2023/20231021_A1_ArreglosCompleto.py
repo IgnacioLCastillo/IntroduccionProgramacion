@@ -86,6 +86,8 @@ def udfCopiaVector(ptam,parreglooroginal,parregloCopiaDuplicado):
 def mimain():
     import array as arr
     miArreglo = arr.array('i', [0, 0, 0,0,0,0,0,0,0,0])
+
+
     miArregloDuplicado = arr.array('i', [0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
     #miArreglo = arr.array('i', range(10))
     #Rutina de carga del Vector

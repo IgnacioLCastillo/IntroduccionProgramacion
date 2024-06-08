@@ -1,4 +1,3 @@
-
 def porc_calcula_vocales(ppalabra):
     # Calcula el porcentaje de vocales sobre consonantes
     ltamaño = len(ppalabra)

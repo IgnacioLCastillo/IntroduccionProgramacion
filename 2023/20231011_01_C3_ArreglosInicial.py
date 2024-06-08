@@ -13,7 +13,10 @@ import array as arr
 #Definicion y dimensionamiento
 miArreglo = arr.array('i',range(5))
 
-
+# otra forma de inicializar
+# miArreglo = arr.array('i', range(10))
+# Otra forma mas
+# miArreglo = arr.array('i', [0]*10)
 '''
 
 #miArreglo = arr.array('i',[0,0,0,0,0])

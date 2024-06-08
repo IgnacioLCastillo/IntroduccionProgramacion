@@ -23,7 +23,7 @@ for i in range(len(mi_tupla)):
 '''
 print (int('1'))
 mi_cadena = "Hola"
-# No puedes cambiar un carácter en mi_cadena, pero puedes crear una nueva cadena.
+# No puedo cambiar un carácter en mi_cadena, pero puedo crear una nueva cadena.
 print(mi_cadena[0]) #ven que puedo mosrtar una posic del string porque es ordenado?
 #mi_cadena[0] = "h" #ven que no puedes cambiar un carácter en mi_cadena, porque no es mutable
 #Y si quisiese cambiarlo y transformalo en mutable que puedo hacer??
