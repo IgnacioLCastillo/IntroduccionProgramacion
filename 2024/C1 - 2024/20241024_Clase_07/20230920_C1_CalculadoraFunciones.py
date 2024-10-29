@@ -33,8 +33,7 @@ def udfMain():
 
         match opcionSeleccionada:
             case 1:
-                result=udfSuma(numa,numb)
-                print("Suma",result)
+                print("Suma",udfSuma(numa,numb))
             case 2:
                 print("Resta",udfResta(numa,numb))
             case 3:
